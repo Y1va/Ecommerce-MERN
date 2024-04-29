@@ -18,6 +18,7 @@ const server = new ApolloServer({
 const startApolloServer = async () => {
   await server.start();
 
+  // Middleware to parse incoming requests
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
 
