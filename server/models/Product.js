@@ -1,7 +1,10 @@
+// Import the mongoose module for MongoDB database interaction
 const mongoose = require('mongoose');
 
+// Destructure the Schema object from mongoose
 const { Schema } = mongoose;
 
+// New schema for the products
 const productSchema = new Schema({
   name: {
     type: String,
@@ -31,6 +34,8 @@ const productSchema = new Schema({
   }
 });
 
+// Create a model from the schema
 const Product = mongoose.model('Product', productSchema);
 
+// Exporting the Product model
 module.exports = Product;

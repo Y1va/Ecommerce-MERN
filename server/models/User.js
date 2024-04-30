@@ -12,19 +12,16 @@ const Order = require('./Order');
 
 // Define a new schema for User
 const userSchema = new Schema({
-  // Define the firstName field
   firstName: {
     type: String,
     required: true, 
     trim: true
   },
-  // Define the lastName field
   lastName: {
     type: String,
     required: true,
     trim: true
   },
-  // Define the email field
   email: {
     type: String,
     required: true,
@@ -37,7 +34,6 @@ const userSchema = new Schema({
       message: (props) => `${props.value} is not a valid email address!`
     }
   },
-  // Define the password field
   password: {
     type: String,
     required: true,
