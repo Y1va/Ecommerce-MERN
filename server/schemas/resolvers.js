@@ -3,7 +3,8 @@
 // Importing necessary models and utilities
 const { User, Product, Category, Order } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
-const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
+// Publishable test API stripe key
+const stripe = require('stripe')('pk_test_51PBEFvK5jI2EgQJimwFKvxZYoXvesLP4E3VuVRkOPW40aS6AAaCuOLzNd2Qsq1SLhtPAoKBa1gcsgpZXBLZ2vf4Z00DkNOXeli');
 
 // Resolvers object containing Query and Mutation functions
 const resolvers = {
