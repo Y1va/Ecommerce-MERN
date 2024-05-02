@@ -201,7 +201,7 @@ db.once('open', async () => {
     {
       name: 'North Face Hoodie',
       description:
-        "Stay warm and comfortable on all your outdoor adventures with The North Face Mens Half Dome Hoodie. Crafted from soft and durable cotton-polyester blend fabric, this hoodie offers the perfect combination of warmth and breathability",
+        'Stay warm and comfortable on all your outdoor adventures with The North Face Mens Half Dome Hoodie. Crafted from soft and durable cotton-polyester blend fabric, this hoodie offers the perfect combination of warmth and breathability',
       image: 'nfhoodie.jpg',
       category: categories[2]._id,
       price: 99.99,
@@ -210,7 +210,7 @@ db.once('open', async () => {
     {
       name: 'Mens Slim-Fit Dress Shirt',
       description:
-        "A classic wardrobe staple, this slim-fit dress shirt is perfect for formal occasions or professional settings. Made from high-quality cotton blend fabric, it offers both style and comfort.",
+        'A classic wardrobe staple, this slim-fit dress shirt is perfect for formal occasions or professional settings. Made from high-quality cotton blend fabric, it offers both style and comfort.',
       image: 'nfhoodie.jpg',
       category: categories[2]._id,
       price: 49.99,
@@ -219,7 +219,7 @@ db.once('open', async () => {
     {
       name: 'Womens High-Waisted Skinny Jeans',
       description:
-        "These high-waisted skinny jeans are designed to flatter and elongate the silhouette.",
+        'These high-waisted skinny jeans are designed to flatter and elongate the silhouette.',
       image: 'wmnsjeans.jpg',
       category: categories[2]._id,
       price: 49.99,
@@ -228,11 +228,74 @@ db.once('open', async () => {
     {
       name: 'Womens Wrap Dress',
       description:
-        "Elegant and versatile, this wrap dress is perfect for both casual and formal occasions. With its flattering silhouette and adjustable tie waist, it offers comfort and style.",
+        'Elegant and versatile, this wrap dress is perfect for both casual and formal occasions. With its flattering silhouette and adjustable tie waist, it offers comfort and style.',
       image: 'wrapdress.jpg',
       category: categories[2]._id,
       price: 38.99,
       qauntity: 250
+    },
+    {
+      name: 'Industrial Style Bookcase',
+      description:
+        'Organize your books, decor, and keepsakes with this industrial-style bookcase. Made from metal and reclaimed wood, it combines rugged charm with functional storage, perfect for adding character to any room.',
+      image: 'bookshelf.jpg',
+      category: categories[3]._id,
+      price: 38.99,
+      qauntity: 250
+    },
+    {
+      name: 'Scandinavian Coffee Table',
+      description:
+        'Bring Scandinavian charm to your living room with this coffee table. Its clean lines, natural wood finish, and minimalist design create a timeless centerpiece for your seating area.',
+      image: 'coffeetable.jpg',
+      category: categories[3]._id,
+      price: 174.99,
+      qauntity: 90
+    },
+    {
+      name: 'Mid-Century Modern Sofa',
+      description:
+        ' Elevate your living room with this sleek and stylish mid-century modern sofa. Featuring clean lines, tapered legs, and button-tufted cushions, it adds a touch of retro charm to any space.',
+      image: 'modernsofa.jpg',
+      category: categories[3]._id,
+      price: 799.99,
+      qauntity: 300
+    },
+    {
+      name: 'Ergonomic Office Chair',
+      description:
+        'Stay comfortable and productive with this ergonomic office chair. Adjustable lumbar support, padded armrests, and breathable mesh upholstery provide optimal comfort during long work hours.',
+      image: 'officechair.jpg',
+      category: categories[3]._id,
+      price: 249.99,
+      qauntity: 300
+    },
+    {
+      name: 'Outdoor Patio Set',
+      description:
+        "Transform your outdoor space into an oasis of relaxation with this patio set. Complete with a table and chairs, it's perfect for al fresco dining, entertaining guests, or simply enjoying a morning cup of coffee in the sun.",
+      image: 'outdoorpatioset.png',
+      category: categories[3]._id,
+      price: 1099.99,
+      qauntity: 250
+    },
+    {
+      name: 'Leather Recliner Sofa',
+      description:
+        "Sink into luxury with this leather recliner sofa. Featuring plush cushioning, padded armrests, and a reclining mechanism, it's the perfect spot to unwind after a long day.",
+      image: 'reclinesofa.jpg',
+      category: categories[3]._id,
+      price: 799.99,
+      qauntity: 250
+    },
+    {
+      name: 'Floating Wall Shelves',
+      description:
+        "Crafted from high-quality MDF wood and featuring a sleek, minimalist design, these shelves offer both style and functionality for any room in your home.",
+      image: 'wallshelves.jpg',
+      category: categories[3]._id,
+      price: 99.99,
+      qauntity: 100
     }
   ]);
 });
