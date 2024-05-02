@@ -291,7 +291,7 @@ db.once('open', async () => {
     {
       name: 'Floating Wall Shelves',
       description:
-        "Crafted from high-quality MDF wood and featuring a sleek, minimalist design, these shelves offer both style and functionality for any room in your home.",
+        'Crafted from high-quality MDF wood and featuring a sleek, minimalist design, these shelves offer both style and functionality for any room in your home.',
       image: 'wallshelves.jpg',
       category: categories[3]._id,
       price: 99.99,
@@ -300,7 +300,7 @@ db.once('open', async () => {
     {
       name: 'Air Fryer',
       description:
-        "Experience guilt-free frying with our Compact Air Fryer. This innovative appliance uses rapid air technology to fry your favorite foods with little to no oil, resulting in crispy and delicious results every time. ",
+        'Experience guilt-free frying with our Compact Air Fryer. This innovative appliance uses rapid air technology to fry your favorite foods with little to no oil, resulting in crispy and delicious results every time. ',
       image: 'airfryer.jpg',
       category: categories[4]._id,
       price: 99.99,
@@ -309,7 +309,7 @@ db.once('open', async () => {
     {
       name: 'Electric Kettle',
       description:
-        "Boil water quickly and efficiently with this electric kettle. Whether for making tea, coffee, or instant noodles, its sleek design and rapid heating make it a convenient addition to any kitchen countertop.",
+        'Boil water quickly and efficiently with this electric kettle. Whether for making tea, coffee, or instant noodles, its sleek design and rapid heating make it a convenient addition to any kitchen countertop.',
       image: 'electrickettle.jpg',
       category: categories[4]._id,
       price: 84.99,
@@ -327,7 +327,7 @@ db.once('open', async () => {
     {
       name: 'Nespresso Coffee Machine',
       description:
-        "This sleek and compact machine offers the ultimate convenience and versatility, allowing you to brew both espresso and coffee with the touch of a button.",
+        'This sleek and compact machine offers the ultimate convenience and versatility, allowing you to brew both espresso and coffee with the touch of a button.',
       image: 'nespressomachine.jpg',
       category: categories[4]._id,
       price: 199.99,
@@ -345,7 +345,7 @@ db.once('open', async () => {
     {
       name: 'Spice Rack Organiser',
       description:
-        "Keep spices neat and accessible with this spice rack organiser. Featuring tiered shelves or magnetic strips, it mounts to the wall or fits inside cabinets for efficient storage.",
+        'Keep spices neat and accessible with this spice rack organiser. Featuring tiered shelves or magnetic strips, it mounts to the wall or fits inside cabinets for efficient storage.',
       image: 'spicerackorganiser.jpg',
       category: categories[4]._id,
       price: 34.99,
@@ -361,4 +361,29 @@ db.once('open', async () => {
       qauntity: 250
     }
   ]);
+
+  console.log('products seeded');
+
+  await User.create({
+    firstName: 'Bob',
+    lastName: 'Smith',
+    email: 'bob@testmail.com',
+    password: 'password12345',
+    orders: [
+      {
+        products: [products[0]._id, products[0]._id, products[1]._id]
+      }
+    ]
+  });
+
+  await User.create({
+    firstName: 'Harry',
+    lastName: 'Holt',
+    email: 'harry@testmail.com',
+    password: 'password12345'
+  });
+
+  console.log('users seeded');
+
+  process.exit();
 });
