@@ -180,18 +180,59 @@ db.once('open', async () => {
       price: 19.99,
       qauntity: 500
     },
-
-
-
-
-
-
-
-
-
-
-
-
-
+    {
+      name: 'Mens Polo Shirt',
+      description:
+        ' This classic polo shirt is a timeless addition to any wardrobe. Made from breathable cotton fabric, it features a ribbed collar and cuffs for a polished look.',
+      image: 'menspoloshirt.jpg',
+      category: categories[2]._id,
+      price: 49.99,
+      qauntity: 250
+    },
+    {
+      name: 'Mens Nike Tracksuit set',
+      description:
+        'This versatile hooded sweatshirt is a must-have for casual wear. Made from soft cotton-polyester blend fabric, it features a kangaroo pocket and adjustable drawstring hood for added convenience.',
+      image: 'nikeset.jpg',
+      category: categories[2]._id,
+      price: 74.99,
+      qauntity: 250
+    },
+    {
+      name: 'North Face Hoodie',
+      description:
+        "Stay warm and comfortable on all your outdoor adventures with The North Face Mens Half Dome Hoodie. Crafted from soft and durable cotton-polyester blend fabric, this hoodie offers the perfect combination of warmth and breathability",
+      image: 'nfhoodie.jpg',
+      category: categories[2]._id,
+      price: 99.99,
+      qauntity: 250
+    },
+    {
+      name: 'Mens Slim-Fit Dress Shirt',
+      description:
+        "A classic wardrobe staple, this slim-fit dress shirt is perfect for formal occasions or professional settings. Made from high-quality cotton blend fabric, it offers both style and comfort.",
+      image: 'nfhoodie.jpg',
+      category: categories[2]._id,
+      price: 49.99,
+      qauntity: 250
+    },
+    {
+      name: 'Womens High-Waisted Skinny Jeans',
+      description:
+        "These high-waisted skinny jeans are designed to flatter and elongate the silhouette.",
+      image: 'wmnsjeans.jpg',
+      category: categories[2]._id,
+      price: 49.99,
+      qauntity: 250
+    },
+    {
+      name: 'Womens Wrap Dress',
+      description:
+        "Elegant and versatile, this wrap dress is perfect for both casual and formal occasions. With its flattering silhouette and adjustable tie waist, it offers comfort and style.",
+      image: 'wrapdress.jpg',
+      category: categories[2]._id,
+      price: 38.99,
+      qauntity: 250
+    }
   ]);
 });
