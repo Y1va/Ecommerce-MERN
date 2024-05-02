@@ -296,6 +296,69 @@ db.once('open', async () => {
       category: categories[3]._id,
       price: 99.99,
       qauntity: 100
+    },
+    {
+      name: 'Air Fryer',
+      description:
+        "Experience guilt-free frying with our Compact Air Fryer. This innovative appliance uses rapid air technology to fry your favorite foods with little to no oil, resulting in crispy and delicious results every time. ",
+      image: 'airfryer.jpg',
+      category: categories[4]._id,
+      price: 99.99,
+      qauntity: 100
+    },
+    {
+      name: 'Electric Kettle',
+      description:
+        "Boil water quickly and efficiently with this electric kettle. Whether for making tea, coffee, or instant noodles, its sleek design and rapid heating make it a convenient addition to any kitchen countertop.",
+      image: 'electrickettle.jpg',
+      category: categories[4]._id,
+      price: 84.99,
+      qauntity: 400
+    },
+    {
+      name: 'Kitchen Knife Set',
+      description:
+        "Equip your kitchen with this comprehensive knife set, complete with chef's knives, paring knives, and steak knives, all stored in a stylish wooden block. With sharp blades and ergonomic handles, it's perfect for slicing, dicing, and chopping ingredients with precision.",
+      image: 'kitchenknifeset.jpg',
+      category: categories[4]._id,
+      price: 149.99,
+      qauntity: 150
+    },
+    {
+      name: 'Nespresso Coffee Machine',
+      description:
+        "This sleek and compact machine offers the ultimate convenience and versatility, allowing you to brew both espresso and coffee with the touch of a button.",
+      image: 'nespressomachine.jpg',
+      category: categories[4]._id,
+      price: 199.99,
+      qauntity: 150
+    },
+    {
+      name: 'Non-Stick Bakeware Set',
+      description:
+        "Bake delicious treats with this non-stick bakeware set, including cookie sheets, cake pans, and muffin tins. Designed for easy release and cleanup, it's a must-have for any home baker.",
+      image: 'nsbakewareset.jpg',
+      category: categories[4]._id,
+      price: 74.99,
+      qauntity: 150
+    },
+    {
+      name: 'Spice Rack Organiser',
+      description:
+        "Keep spices neat and accessible with this spice rack organiser. Featuring tiered shelves or magnetic strips, it mounts to the wall or fits inside cabinets for efficient storage.",
+      image: 'spicerackorganiser.jpg',
+      category: categories[4]._id,
+      price: 34.99,
+      qauntity: 250
+    },
+    {
+      name: 'Stainless Steel Cookware Set',
+      description:
+        "Upgrade your kitchen with this durable stainless steel cookware set. Including pots, pans, and lids, it's perfect for cooking a variety of dishes with ease and efficiency.",
+      image: 'SSset.jpg',
+      category: categories[4]._id,
+      price: 164.99,
+      qauntity: 250
     }
   ]);
 });
