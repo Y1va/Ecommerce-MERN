@@ -11,7 +11,6 @@ import Signup from './pages/Signup';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 
-// Create a BrowserRouter instance with routes configuration
 const router = createBrowserRouter([
   {
     path: '/',
@@ -19,7 +18,6 @@ const router = createBrowserRouter([
     error: <NoMatch />,
     children: [
       {
-        // Define the home route as the index route
         index: true, 
         element: <Home />
       }, {
@@ -35,7 +33,6 @@ const router = createBrowserRouter([
         path: '/orderHistory',
         element: <OrderHistory />
       }, {
-        // Dynamic route for product details using route parameters
         path: '/products/:id',
         element: <Detail />
       }
@@ -43,7 +40,6 @@ const router = createBrowserRouter([
   }
 ]);
 
-// Render the application using ReactDOM.createRoot
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />
 )
