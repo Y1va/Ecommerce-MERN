@@ -1,74 +1,70 @@
-import { Link } from "react-router-dom";
-import { pluralize } from "../../utils/helpers";
-import { useStoreContext } from "../../utils/GlobalState";
-import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
-import { idbPromise } from "../../utils/helpers";
+import { useEffect } from 'react';
+import ProductItem from '../ProductItem';
+import { useStoreContext } from '../../utils/GlobalState';
+import { UPDATE_PRODUCTS } from '../../utils/actions';
+import { useQuery } from '@apollo/client';
+import { QUERY_PRODUCTS } from '../../utils/queries';
+import { idbPromise } from '../../utils/helpers';
+import spinner from '../../assets/spinner.gif';
 
-// ProductItem component for rendering a single product card
-function ProductItem(item) {
-  // Destructuring item object to extract necessary properties
-  const {
-    image,
-    name,
-    _id,
-    price,
-    quantity
-  } = item;
-
-  // Using the useStoreContext hook to access global state and dispatch function
+function ProductList() {
   const [state, dispatch] = useStoreContext();
 
-  // Destructuring cart array from global state
-  const { cart } = state;
+  const { currentCategory } = state;
 
-  // Function to add the product to the cart
-  const addToCart = () => {
-    // Check if the product is already in the cart
-    const itemInCart = cart.find((cartItem) => cartItem._id === _id);
-    if (itemInCart) {
-      // If the product is already in the cart, update its quantity
+  const { loading, data } = useQuery(QUERY_PRODUCTS);
+
+  useEffect(() => {
+    if (data) {
       dispatch({
-        type: UPDATE_CART_QUANTITY,
-        _id: _id,
-        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+        type: UPDATE_PRODUCTS,
+        products: data.products,
       });
-      // Update the cart in IndexedDB
-      idbPromise('cart', 'put', {
-        ...itemInCart,
-        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+      data.products.forEach((product) => {
+        idbPromise('products', 'put', product);
       });
-    } else {
-      // If the product is not in the cart, add it to the cart
-      dispatch({
-        type: ADD_TO_CART,
-        product: { ...item, purchaseQuantity: 1 }
+    } else if (!loading) {
+      idbPromise('products', 'get').then((products) => {
+        dispatch({
+          type: UPDATE_PRODUCTS,
+          products: products,
+        });
       });
-      // Add the product to IndexedDB
-      idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
     }
+  }, [data, loading, dispatch]);
+
+  function filterProducts() {
+    if (!currentCategory) {
+      return state.products;
+    }
+
+    return state.products.filter(
+      (product) => product.category._id === currentCategory
+    );
   }
 
-  // Rendering the product card
   return (
-    <div className="card px-1 py-1">
-      {/* Link to the product details page */}
-      <Link to={`/products/${_id}`}>
-        <img
-          alt={name}
-          src={`/images/${image}`}
-        />
-        <p>{name}</p>
-      </Link>
-      <div>
-        {/* Displaying the quantity of the product in stock */}
-        <div>{quantity} {pluralize("item", quantity)} in stock</div>
-        <span>${price}</span>
-      </div>
-      {/* Button to add the product to the cart */}
-      <button onClick={addToCart}>Add to cart</button>
+    <div className="my-2">
+      <h2>Our Products:</h2>
+      {state.products.length ? (
+        <div className="flex-row">
+          {filterProducts().map((product) => (
+            <ProductItem
+              key={product._id}
+              _id={product._id}
+              image={product.image}
+              name={product.name}
+              price={product.price}
+              quantity={product.quantity}
+            />
+          ))}
+        </div>
+      ) : (
+        <h3>You haven't added any products yet!</h3>
+      )}
+      {loading ? <img src={spinner} alt="loading" /> : null}
     </div>
   );
 }
 
-// Exporting the ProductItem component
-export default ProductItem;
+export default ProductList;

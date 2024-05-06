@@ -1,38 +1,34 @@
 import { gql } from '@apollo/client';
 
-// This mutation handles user login.
 export const LOGIN = gql`
   mutation login($email: String!, $password: String!) {
     login(email: $email, password: $password) {
-      token // Authentication token returned upon successful login
+      token
       user {
-        _id // User's unique identifier
+        _id
       }
     }
   }
 `;
 
-
-// This mutation adds an order to the system.
 export const ADD_ORDER = gql`
   mutation addOrder($products: [ID]!) {
     addOrder(products: $products) {
-      purchaseDate // Date when the order was made
+      purchaseDate
       products {
-        _id // Unique identifier for each product in the order
-        name // Product name
-        description // Product description
-        price // Product price
-        quantity // Quantity of the product in the order
+        _id
+        name
+        description
+        price
+        quantity
         category {
-          name // Product category name
+          name
         }
       }
     }
   }
 `;
 
-// This mutation adds a new user to the system.
 export const ADD_USER = gql`
   mutation addUser(
     $firstName: String!
@@ -46,9 +42,9 @@ export const ADD_USER = gql`
       email: $email
       password: $password
     ) {
-      token // Authentication token for the newly registered user
+      token
       user {
-        _id // Unique identifier for the user
+        _id
       }
     }
   }
