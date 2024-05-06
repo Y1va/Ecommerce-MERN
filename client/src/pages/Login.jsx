@@ -1,47 +1,34 @@
-// Import necessary hooks and components from React, Apollo Client, and local files
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 
-// Define the Login component
 function Login(props) {
-  // Initialize the formState state for the email and password fields
   const [formState, setFormState] = useState({ email: '', password: '' });
-
-  // Use the useMutation hook to get the login function and error state
   const [login, { error }] = useMutation(LOGIN);
 
-  // Define a function to handle form submission
   const handleFormSubmit = async (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
+    event.preventDefault();
     try {
-      // Call the login function with the email and password from the formState
       const mutationResponse = await login({
         variables: { email: formState.email, password: formState.password },
       });
-      // Get the token from the response
       const token = mutationResponse.data.login.token;
-      // Use the Auth utility to log in with the token
       Auth.login(token);
     } catch (e) {
-      // Log any errors to the console
       console.log(e);
     }
   };
 
-  // Define a function to handle changes to the form fields
   const handleChange = (event) => {
-    const { name, value } = event.target; // Destructure the name and value from the event target
-    // Update the formState with the new value
+    const { name, value } = event.target;
     setFormState({
       ...formState,
       [name]: value,
     });
   };
 
-  // Render the component
   return (
     <div className="container my-1">
       <Link to="/signup">← Go to Signup</Link>
@@ -81,5 +68,4 @@ function Login(props) {
   );
 }
 
-// Export the Login component for use in other parts of the application
 export default Login;
