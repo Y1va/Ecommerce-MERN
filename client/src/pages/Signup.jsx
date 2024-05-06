@@ -1,22 +1,15 @@
-// Import necessary hooks and components from React, Apollo Client, and local files
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
 
-// Define the Signup component
 function Signup(props) {
-  // Initialize the formState state for the email, password, firstName, and lastName fields
-  const [formState, setFormState] = useState({ email: '', password: '', firstName: '', lastName: '' });
-
-  // Use the useMutation hook to get the addUser function
+  const [formState, setFormState] = useState({ email: '', password: '' });
   const [addUser] = useMutation(ADD_USER);
 
-  // Define a function to handle form submission
   const handleFormSubmit = async (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
-    // Call the addUser function with the email, password, firstName, and lastName from the formState
+    event.preventDefault();
     const mutationResponse = await addUser({
       variables: {
         email: formState.email,
@@ -25,23 +18,18 @@ function Signup(props) {
         lastName: formState.lastName,
       },
     });
-    // Get the token from the response
     const token = mutationResponse.data.addUser.token;
-    // Use the Auth utility to log in with the token
     Auth.login(token);
   };
 
-  // Define a function to handle changes to the form fields
   const handleChange = (event) => {
-    const { name, value } = event.target; // Destructure the name and value from the event target
-    // Update the formState with the new value
+    const { name, value } = event.target;
     setFormState({
       ...formState,
       [name]: value,
     });
   };
 
-  // Render the component
   return (
     <div className="container my-1">
       <Link to="/login">← Go to Login</Link>
@@ -96,5 +84,4 @@ function Signup(props) {
   );
 }
 
-// Export the Signup component for use in other parts of the application
 export default Signup;
