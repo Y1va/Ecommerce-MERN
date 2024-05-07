@@ -99,9 +99,9 @@ function Detail() {
           <Link to="/">← Back to Products</Link>
 
           <h2>{currentProduct.name}</h2>
-
+          <div className='description-card'>
           <p>{currentProduct.description}</p>
-
+          </div>
           <p>
             <strong>Price:</strong>${currentProduct.price}{' '}
             <button onClick={addToCart}>Add to Cart</button>
