@@ -1,7 +1,7 @@
 :root {
-  --primary: #232F3E;
+  --primary: #363537;
   --secondary: #00b4d8;
-  --tertiary: #B12704;
+  --tertiary: black;
   --light: #fafafa;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
@@ -78,10 +78,15 @@ h6 {
   background: #a2d2ff;
 }
 
+.product-name:hover {
+  color: #fb8500;
+}
+
 p {
   font-size: 1.1rem;
   margin-top: 0;
 }
+
 
 a {
   color: var(--tertiary);
@@ -90,7 +95,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 header {
