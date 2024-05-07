@@ -211,7 +211,7 @@ db.once('open', async () => {
       name: 'Mens Slim-Fit Dress Shirt',
       description:
         'A classic wardrobe staple, this slim-fit dress shirt is perfect for formal occasions or professional settings. Made from high-quality cotton blend fabric, it offers both style and comfort.',
-      image: 'nfhoodie.jpg',
+      image: 'shirt.jpg',
       category: categories[2]._id,
       price: 49.99,
       qauntity: 250
@@ -229,7 +229,7 @@ db.once('open', async () => {
       name: 'Womens Wrap Dress',
       description:
         'Elegant and versatile, this wrap dress is perfect for both casual and formal occasions. With its flattering silhouette and adjustable tie waist, it offers comfort and style.',
-      image: 'wrapdress.jpg',
+      image: 'wrapdress.png',
       category: categories[2]._id,
       price: 38.99,
       qauntity: 250
