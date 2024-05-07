@@ -25,7 +25,7 @@ db.once('open', async () => {
       image: 'wirelessearbuds.jpg',
       category: categories[0]._id,
       price: 59.99,
-      qauntity: 500
+      quantity: 500
     },
     {
       name: 'Smartwatch',
@@ -34,7 +34,7 @@ db.once('open', async () => {
       image: 'smartwatch.png',
       category: categories[0]._id,
       price: 249.99,
-      qauntity: 250
+      quantity: 250
     },
     {
       name: 'Action Camera',
@@ -43,7 +43,7 @@ db.once('open', async () => {
       image: 'actioncamera.png',
       category: categories[0]._id,
       price: 174.99,
-      qauntity: 250
+      quantity: 250
     },
     {
       name: 'Bluetooth Speaker',
@@ -52,7 +52,7 @@ db.once('open', async () => {
       image: 'btspeaker.jpg',
       category: categories[0]._id,
       price: 149.99,
-      qauntity: 250
+      quantity: 250
     },
     {
       name: 'Wireless Charging Pad',
@@ -61,7 +61,7 @@ db.once('open', async () => {
       image: 'chargingpad.jpg',
       category: categories[0]._id,
       price: 34.99,
-      qauntity: 500
+      quantity: 500
     },
     {
       name: 'Drone',
@@ -70,7 +70,7 @@ db.once('open', async () => {
       image: 'drone.jpg',
       category: categories[0]._id,
       price: 599.99,
-      qauntity: 50
+      quantity: 50
     },
     {
       name: 'Electric Scooter',
@@ -79,7 +79,7 @@ db.once('open', async () => {
       image: 'escooter.jpg',
       category: categories[0]._id,
       price: 349.99,
-      qauntity: 100
+      quantity: 100
     },
     {
       name: 'Gaming Headset',
@@ -88,7 +88,7 @@ db.once('open', async () => {
       image: 'headset.jpg',
       category: categories[0]._id,
       price: 149.99,
-      qauntity: 100
+      quantity: 100
     },
     {
       name: 'Power Bank',
@@ -97,7 +97,7 @@ db.once('open', async () => {
       image: 'powerbank.png',
       category: categories[0]._id,
       price: 49.99,
-      qauntity: 100
+      quantity: 100
     },
     {
       name: 'Robot Vacuum Cleaner',
@@ -106,7 +106,7 @@ db.once('open', async () => {
       image: 'robotcleaner.jpg',
       category: categories[0]._id,
       price: 249.99,
-      qauntity: 100
+      quantity: 100
     },
     {
       name: 'Wireless Security Camera',
@@ -115,7 +115,7 @@ db.once('open', async () => {
       image: 'securitycamera.jpg',
       category: categories[0]._id,
       price: 149.99,
-      qauntity: 100
+      quantity: 100
     },
     {
       name: 'Virtual Reality Headset',
@@ -124,7 +124,7 @@ db.once('open', async () => {
       image: 'VRheadset.png',
       category: categories[0]._id,
       price: 999.99,
-      qauntity: 100
+      quantity: 100
     },
     {
       name: 'The Alchemist" by Paulo Coelho',
@@ -133,7 +133,7 @@ db.once('open', async () => {
       image: 'alchemist.jpg',
       category: categories[1]._id,
       price: 19.99,
-      qauntity: 500
+      quantity: 500
     },
     {
       name: 'Becoming" by Michelle Obama',
@@ -142,7 +142,7 @@ db.once('open', async () => {
       image: 'Becoming.jpg',
       category: categories[1]._id,
       price: 19.99,
-      qauntity: 500
+      quantity: 500
     },
     {
       name: 'Sapiens: A Brief History of Humankind',
@@ -151,7 +151,7 @@ db.once('open', async () => {
       image: 'sapiens.jpg',
       category: categories[1]._id,
       price: 19.99,
-      qauntity: 500
+      quantity: 500
     },
     {
       name: 'The Great Gatsby by F. Scott Fitzgerald',
@@ -160,7 +160,7 @@ db.once('open', async () => {
       image: 'gatsby.jpg',
       category: categories[1]._id,
       price: 19.99,
-      qauntity: 500
+      quantity: 500
     },
     {
       name: 'To Kill a Mockingbird" by Harper Lee',
@@ -169,7 +169,7 @@ db.once('open', async () => {
       image: 'mockingbird.jpg',
       category: categories[1]._id,
       price: 19.99,
-      qauntity: 500
+      quantity: 500
     },
     {
       name: 'Dune by Frank Herbert',
@@ -178,7 +178,7 @@ db.once('open', async () => {
       image: 'dune.jpg',
       category: categories[1]._id,
       price: 19.99,
-      qauntity: 500
+      quantity: 500
     },
     {
       name: 'Mens Polo Shirt',
@@ -187,7 +187,7 @@ db.once('open', async () => {
       image: 'menspoloshirt.jpg',
       category: categories[2]._id,
       price: 49.99,
-      qauntity: 250
+      quantity: 250
     },
     {
       name: 'Mens Nike Tracksuit set',
@@ -196,7 +196,7 @@ db.once('open', async () => {
       image: 'nikeset.jpg',
       category: categories[2]._id,
       price: 74.99,
-      qauntity: 250
+      quantity: 250
     },
     {
       name: 'North Face Hoodie',
@@ -205,7 +205,7 @@ db.once('open', async () => {
       image: 'nfhoodie.jpg',
       category: categories[2]._id,
       price: 99.99,
-      qauntity: 250
+      quantity: 250
     },
     {
       name: 'Mens Slim-Fit Dress Shirt',
@@ -214,7 +214,7 @@ db.once('open', async () => {
       image: 'shirt.jpg',
       category: categories[2]._id,
       price: 49.99,
-      qauntity: 250
+      quantity: 250
     },
     {
       name: 'Womens High-Waisted Skinny Jeans',
@@ -223,7 +223,7 @@ db.once('open', async () => {
       image: 'wmnsjeans.jpg',
       category: categories[2]._id,
       price: 49.99,
-      qauntity: 250
+      quantity: 250
     },
     {
       name: 'Womens Wrap Dress',
@@ -232,7 +232,7 @@ db.once('open', async () => {
       image: 'wrapdress.png',
       category: categories[2]._id,
       price: 38.99,
-      qauntity: 250
+      quantity: 250
     },
     {
       name: 'Industrial Style Bookcase',
@@ -241,7 +241,7 @@ db.once('open', async () => {
       image: 'bookshelf.jpg',
       category: categories[3]._id,
       price: 38.99,
-      qauntity: 250
+      quantity: 250
     },
     {
       name: 'Scandinavian Coffee Table',
@@ -250,7 +250,7 @@ db.once('open', async () => {
       image: 'coffeetable.jpg',
       category: categories[3]._id,
       price: 174.99,
-      qauntity: 90
+      quantity: 90
     },
     {
       name: 'Mid-Century Modern Sofa',
@@ -259,7 +259,7 @@ db.once('open', async () => {
       image: 'modernsofa.jpg',
       category: categories[3]._id,
       price: 799.99,
-      qauntity: 300
+      quantity: 300
     },
     {
       name: 'Ergonomic Office Chair',
@@ -268,7 +268,7 @@ db.once('open', async () => {
       image: 'officechair.jpg',
       category: categories[3]._id,
       price: 249.99,
-      qauntity: 300
+      quantity: 300
     },
     {
       name: 'Outdoor Patio Set',
@@ -277,7 +277,7 @@ db.once('open', async () => {
       image: 'outdoorpatioset.png',
       category: categories[3]._id,
       price: 1099.99,
-      qauntity: 250
+      quantity: 250
     },
     {
       name: 'Leather Recliner Sofa',
@@ -286,7 +286,7 @@ db.once('open', async () => {
       image: 'reclinesofa.jpg',
       category: categories[3]._id,
       price: 799.99,
-      qauntity: 250
+      quantity: 250
     },
     {
       name: 'Floating Wall Shelves',
@@ -295,7 +295,7 @@ db.once('open', async () => {
       image: 'wallshelves.jpg',
       category: categories[3]._id,
       price: 99.99,
-      qauntity: 100
+      quantity: 100
     },
     {
       name: 'Air Fryer',
@@ -304,7 +304,7 @@ db.once('open', async () => {
       image: 'airfryer.jpg',
       category: categories[4]._id,
       price: 99.99,
-      qauntity: 100
+      quantity: 100
     },
     {
       name: 'Electric Kettle',
@@ -313,7 +313,7 @@ db.once('open', async () => {
       image: 'electrickettle.jpg',
       category: categories[4]._id,
       price: 84.99,
-      qauntity: 400
+      quantity: 400
     },
     {
       name: 'Kitchen Knife Set',
@@ -322,7 +322,7 @@ db.once('open', async () => {
       image: 'kitchenknifeset.jpg',
       category: categories[4]._id,
       price: 149.99,
-      qauntity: 150
+      quantity: 150
     },
     {
       name: 'Nespresso Coffee Machine',
@@ -331,7 +331,7 @@ db.once('open', async () => {
       image: 'nespressomachine.jpg',
       category: categories[4]._id,
       price: 199.99,
-      qauntity: 150
+      quantity: 150
     },
     {
       name: 'Non-Stick Bakeware Set',
@@ -340,7 +340,7 @@ db.once('open', async () => {
       image: 'nsbakewareset.jpg',
       category: categories[4]._id,
       price: 74.99,
-      qauntity: 150
+      quantity: 150
     },
     {
       name: 'Spice Rack Organiser',
@@ -349,7 +349,7 @@ db.once('open', async () => {
       image: 'spicerackorganiser.jpg',
       category: categories[4]._id,
       price: 34.99,
-      qauntity: 250
+      quantity: 250
     },
     {
       name: 'Stainless Steel Cookware Set',
@@ -358,7 +358,7 @@ db.once('open', async () => {
       image: 'SSset.jpg',
       category: categories[4]._id,
       price: 164.99,
-      qauntity: 250
+      quantity: 250
     }
   ]);
 
