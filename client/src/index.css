@@ -74,6 +74,10 @@ h6 {
   list-style: none;
 }
 
+.nav-bar:hover {
+  text-decoration: underline;
+}
+
 .categories button {
   background: #a2d2ff;
 }
