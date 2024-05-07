@@ -35,6 +35,7 @@ function Detail() {
         _id: product._id,
         price: product.price,
         quantity: product.quantity,
+        description: product.description,
       };
       
       setCurrentProduct(item);

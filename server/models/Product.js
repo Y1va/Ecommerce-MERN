@@ -22,7 +22,7 @@ const productSchema = new Schema({
     required: true,
     min: 5.00
   },
-  qauntity: {
+  quantity: {
     type: Number,
     min: 0,
     default: 0
