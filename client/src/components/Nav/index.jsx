@@ -6,7 +6,7 @@ function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <ul className="flex-row">
+        <ul className="flex-row nav-bar">
           <li className="mx-1">
             <Link to="/orderHistory">
               Order History
@@ -42,8 +42,8 @@ function Nav() {
     <header className="flex-row px-1">
       <h1>
         <Link to="/">
-          <span role="img" aria-label="shopping bag">🛍️</span>
-          -Shop-Shop
+          <span role="img" aria-label="shopping bag"></span>
+          Swift Cart
         </Link>
       </h1>
 
