@@ -4,7 +4,7 @@
 const { User, Product, Category, Order } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 // Publishable test API stripe key
-const stripe = require('stripe')('pk_test_51PBEFvK5jI2EgQJimwFKvxZYoXvesLP4E3VuVRkOPW40aS6AAaCuOLzNd2Qsq1SLhtPAoKBa1gcsgpZXBLZ2vf4Z00DkNOXeli');
+const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 // Resolvers object containing Query and Mutation functions
 const resolvers = {
