@@ -37,7 +37,7 @@ function OrderHistory() {
                         <span>${price}</span>
                       </div>
                     </div>
-                  ))} 
+                  ))}
                 </div>
               </div>
             ))}
